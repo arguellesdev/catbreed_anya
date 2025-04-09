@@ -1,0 +1,2 @@
+/Users/arguellesdev/development/code_challenges/pragma_cat/my_app/android/app/.cxx/Debug/25h57414/x86_64/CMakeFiles/edit_cache.dir
+/Users/arguellesdev/development/code_challenges/pragma_cat/my_app/android/app/.cxx/Debug/25h57414/x86_64/CMakeFiles/rebuild_cache.dir
