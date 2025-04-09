@@ -4,8 +4,8 @@ import 'package:my_app/app/navigation/routes.dart';
 import 'package:my_app/app/ui/theme/app_colors.dart';
 import 'package:my_app/app/ui/theme/app_typography.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {

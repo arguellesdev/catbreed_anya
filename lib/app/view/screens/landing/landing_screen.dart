@@ -42,57 +42,75 @@ class _LandingScreenState extends State<LandingScreen> {
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
-          : ListView.builder(
-              padding: const EdgeInsets.all(16),
-              itemCount: _breeds.length,
-              itemBuilder: (context, index) {
-                final breed = _breeds[index];
+          : _breeds.isEmpty
+              ? const Center(
+                  child: Text(
+                    'No breeds found',
+                    style: AppTypography.titleMedium,
+                  ),
+                )
+              : ListView.builder(
+                  padding: const EdgeInsets.all(16),
+                  itemCount: _breeds.length,
+                  itemBuilder: (context, index) {
+                    final breed = _breeds[index];
 
-                return Card(
-                  elevation: 3,
-                  margin: const EdgeInsets.only(bottom: 16),
-                  color: AppColors.cardBackground,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(55),
-                  ),
-                  child: ListTile(
-                    contentPadding: const EdgeInsets.all(12),
-                    horizontalTitleGap: 12,
-                    leading: breed.imageUrl.isNotEmpty
-                        ? ClipOval(
-                            child: Image.network(
-                              breed.imageUrl,
-                              width: 60,
-                              height: 60,
-                              fit: BoxFit.cover,
+                    return Card(
+                      elevation: 3,
+                      margin: const EdgeInsets.only(bottom: 16),
+                      color: AppColors.cardBackground,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(55),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 16,
+                          horizontal: 24,
+                        ),
+                        child: Column(
+                          children: [
+                            ListTile(
+                              contentPadding: const EdgeInsets.all(8),
+                              horizontalTitleGap: 36,
+                              leading: breed.imageUrl.isNotEmpty
+                                  ? ClipRRect(
+                                      borderRadius: BorderRadius.circular(12),
+                                      child: Image.network(
+                                        breed.imageUrl,
+                                        width: 60,
+                                        height: 60,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    )
+                                  : const Icon(Icons.image_not_supported),
+                              title: Text(
+                                breed.name,
+                                style: AppTypography.titleMedium,
+                              ),
+                              subtitle: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    'Origin: ${breed.origin}',
+                                    style: AppTypography.body,
+                                  ),
+                                  Text(
+                                    'Intelligence: ${breed.intelligence}',
+                                    style: AppTypography.body,
+                                  ),
+                                ],
+                              ),
+                              onTap: () {
+                                context.push('/details', extra: breed);
+                              },
                             ),
-                          )
-                        : const Icon(Icons.image_not_supported),
-                    title: Text(
-                      breed.name,
-                      style: AppTypography.titleMedium,
-                    ),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 4),
-                        Text(
-                          'Origin: ${breed.origin}',
-                          style: AppTypography.body,
+                          ],
                         ),
-                        Text(
-                          'Intelligence: ${breed.intelligence}',
-                          style: AppTypography.body,
-                        ),
-                      ],
-                    ),
-                    onTap: () {
-                      context.push('/details', extra: breed);
-                    },
-                  ),
-                );
-              },
-            ),
+                      ),
+                    );
+                  },
+                ),
     );
   }
 }

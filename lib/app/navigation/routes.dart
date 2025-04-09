@@ -2,7 +2,7 @@ enum AppRoute {
   splash,
   landing,
   details,
-  home,
+  welcome,
 }
 
 extension AppRouteExtension on AppRoute {
@@ -10,7 +10,7 @@ extension AppRouteExtension on AppRoute {
     switch (this) {
       case AppRoute.splash:
         return '/';
-      case AppRoute.home:
+      case AppRoute.welcome:
         return '/home';
       case AppRoute.landing:
         return '/landing';

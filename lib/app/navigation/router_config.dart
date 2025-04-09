@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:my_app/app/navigation/routes.dart';
 import 'package:my_app/app/view/screens/details/details_screen.dart';
-import 'package:my_app/app/view/screens/home/home_screen.dart';
+import 'package:my_app/app/view/screens/home/welcome_screen.dart';
 import 'package:my_app/app/view/screens/landing/landing_screen.dart';
 import 'package:my_app/app/view/screens/splash/splash_screen.dart';
 import 'package:my_app/data/models/breed_model.dart';
@@ -16,9 +16,9 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const SplashScreen(),
     ),
     GoRoute(
-      path: AppRoute.home.path,
-      name: AppRoute.home.name,
-      builder: (context, state) => const HomeScreen(),
+      path: AppRoute.welcome.path,
+      name: AppRoute.welcome.name,
+      builder: (context, state) => const WelcomePage(),
     ),
     GoRoute(
       path: AppRoute.landing.path,

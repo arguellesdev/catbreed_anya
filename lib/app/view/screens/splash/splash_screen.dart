@@ -16,8 +16,10 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     // Esperar 2 segundos y navegar al landing
-    Future.delayed(const Duration(seconds: 2), () {
-      context.go(AppRoute.home.path);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(const Duration(seconds: 2), () {
+        context.go(AppRoute.welcome.path);
+      });
     });
   }
 

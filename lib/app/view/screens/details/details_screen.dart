@@ -17,7 +17,9 @@ class DetailScreen extends StatelessWidget {
         title: Text(
           breed.name,
           style: AppTypography.titleLarge.copyWith(
-              fontWeight: FontWeight.bold, color: AppColors.cardBackground),
+            fontWeight: FontWeight.bold,
+            color: AppColors.cardBackground,
+          ),
           textAlign: TextAlign.center,
         ),
         backgroundColor: AppColors.primary,
