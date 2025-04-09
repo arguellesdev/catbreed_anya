@@ -7,7 +7,7 @@ class AppColors {
   //Primary Colors
   static const Color primary = Color.fromARGB(255, 234, 140, 1);
   static const Color secondary = Color(0xFFFFD54F);
-  static const Color accent = Color.fromARGB(255, 246, 168, 50);
+  static const Color accent = Color.fromARGB(255, 229, 185, 119);
 
   //Text Colors
   static const Color textPrimary = Colors.black87;
