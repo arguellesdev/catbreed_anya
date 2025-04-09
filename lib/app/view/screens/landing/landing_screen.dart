@@ -137,7 +137,11 @@ class _LandingScreenState extends State<LandingScreen> {
                                           ),
                                           Text(
                                             'Intelligence: '
+<<<<<<< HEAD
                                             '${breed.intelligence}',
+=======
+                                            ' ${breed.intelligence}',
+>>>>>>> cf7146b9b6b212525a70fb066c66022df8209f93
                                             style: AppTypography.body,
                                           ),
                                         ],
