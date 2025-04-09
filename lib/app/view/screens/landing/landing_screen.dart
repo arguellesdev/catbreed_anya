@@ -120,7 +120,8 @@ class _LandingScreenState extends State<LandingScreen> {
                                               ),
                                             )
                                           : const Icon(
-                                              Icons.image_not_supported),
+                                              Icons.image_not_supported,
+                                            ),
                                       title: Text(
                                         breed.name,
                                         style: AppTypography.titleMedium,
@@ -135,7 +136,8 @@ class _LandingScreenState extends State<LandingScreen> {
                                             style: AppTypography.body,
                                           ),
                                           Text(
-                                            'Intelligence: ${breed.intelligence}',
+                                            'Intelligence: '
+                                            '${breed.intelligence}',
                                             style: AppTypography.body,
                                           ),
                                         ],
