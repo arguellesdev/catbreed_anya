@@ -11,8 +11,18 @@ A Flutter app created as a code challenge for the Pragma recruitment process.
 ---
 
 ## Preview
+iOS
+![image](https://github.com/user-attachments/assets/ddc8768b-840b-4ce4-8d10-87805229c66b)
+![image](https://github.com/user-attachments/assets/ecdbbcbb-557b-44da-b6fb-987ab76178e6)
+![image](https://github.com/user-attachments/assets/38f40af5-7d91-4743-b52c-0c33fb4cfaf0)
+![image](https://github.com/user-attachments/assets/0bb7f839-ebf6-41a9-b06b-656faa0eabec)
 
-![App Screenshot](screenshots/detail_preview.png) <!-- Replace with your own path -->
+Android
+![image](https://github.com/user-attachments/assets/d3ccc805-35a4-4f33-a344-a680a6a224e3)
+![image](https://github.com/user-attachments/assets/111fcb5c-b0db-45e8-a8ae-fe5751502ec3)
+![image](https://github.com/user-attachments/assets/2796ff6f-8f4f-4cfc-b833-0eb2b2ad8958)
+![image](https://github.com/user-attachments/assets/bf2ac7e2-ded6-49ae-b2ff-d8ffeca9d87f)
+![image](https://github.com/user-attachments/assets/6625162f-d7ee-4da7-b556-3328c1b646ee)
 
 ---
 
