@@ -11,14 +11,10 @@ class CatAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      shape: ShapeBorder.lerp(
-        RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(55),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(28),
         ),
-        RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(55),
-        ),
-        0,
       ),
       leading: showBackButton
           ? IconButton(
