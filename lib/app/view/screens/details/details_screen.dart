@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/app/ui/theme/app_colors.dart';
 import 'package:my_app/app/ui/theme/app_typography.dart';
+import 'package:my_app/app/ui/widgets/cat_app_bar.dart';
 import 'package:my_app/data/models/breed_model.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -13,17 +14,9 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          breed.name,
-          style: AppTypography.titleLarge.copyWith(
-            fontWeight: FontWeight.bold,
-            color: AppColors.cardBackground,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        backgroundColor: AppColors.primary,
-        foregroundColor: AppColors.textLight,
+      appBar: const CatAppBar(
+        title: 'Catbreeds Details',
+        showBackButton: false,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
