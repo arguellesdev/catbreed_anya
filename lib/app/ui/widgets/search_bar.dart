@@ -4,8 +4,8 @@ import 'package:my_app/app/ui/theme/app_typography.dart';
 
 class BreedSearchBar extends StatelessWidget {
   const BreedSearchBar({
-    super.key,
     required this.onChanged,
+    super.key,
     this.hintText = 'Search meow-nificent breeds...',
   });
 
